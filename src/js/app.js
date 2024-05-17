@@ -168,3 +168,44 @@
 // removeSmallest([1,2,3,4,5]);
 // removeSmallest([5,4,3,2,1]);
 // removeSmallest([2,2,1,2,1]);
+
+// Task 8
+
+// function alternativeKeysLetter(text){
+//     // result [ExAmPlE, eXaMpLe]
+
+//     let arr = text.split(',');
+//     let arrIndex0 = arr[0];
+//     let arrIndex1 = arr[1];
+    
+//     for (let i = 0; i < arr.length; i++){
+        
+//         if (i % 2 == 0){
+//             arrIndex0[0].toUpperCase();
+//             console.log(arrIndex0);
+//         } else {
+//             arrIndex1[1].toUpperCase();
+//         }
+
+//     }
+    
+//     console.log(arr);
+// }
+
+// alternativeKeysLetter('example');
+
+// Task 9
+
+// function minMax(arr){
+//     // min and max
+
+//     arr.sort(function(a,b){return a-b});
+//     let min = arr[0];
+//     let max = arr[arr.length - 1];
+//     console.log(min);
+//     console.log(max);
+
+// }
+
+// minMax([2, 34, 1, 45, 99]);
+
