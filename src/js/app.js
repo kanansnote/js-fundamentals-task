@@ -209,3 +209,64 @@
 
 // minMax([2, 34, 1, 45, 99]);
 
+// Task 10
+
+// function sumArray(arr){
+//     return arr.reduce((sum, item) => sum + item, 0);
+// }
+
+// console.log(sumArray[1,2,3,4]);
+
+// Task 11
+
+// function filterEvenNumbers(arr){
+//     return arr.filter(element=>element % 2 == 0);
+// }
+
+// console.log(filterEvenNumbers([1,2,3,4])); // [2,4]
+
+// Task 12
+
+// function reverseArray(arr){
+//     let reverse = arr.toReversed();
+//     return reverse;
+// }
+
+// const numbers = [1,2,3,4];
+// console.log(reverseArray(numbers));
+
+// Task 13
+
+// function flattenArray(arr){
+//     return arr.flat(Infinity);
+// }
+
+// console.log(flattenArray([1, [2, [3, 4], 5]]));
+
+// Task 14
+
+// function isSorted(arr){
+//     // kod
+
+//     const newArr = [];
+
+//     for (let i = 0; i < arr.length-1; i++) {
+
+//         if (arr[i] < arr[i+1]) {
+//             newArr.push(true);
+//         } else {
+//             newArr.push(false);
+//         }
+    
+//     }
+
+//     if (newArr.includes(false)) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+
+// }
+
+// console.log(isSorted([1,2,3,4])); // Output: true;
+// console.log(isSorted([1,3,2,4])); // Output: false;
