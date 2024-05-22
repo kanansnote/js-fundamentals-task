@@ -270,3 +270,70 @@
 
 // console.log(isSorted([1,2,3,4])); // Output: true;
 // console.log(isSorted([1,3,2,4])); // Output: false;
+
+// Task 15
+// Write a function that takes two arrays and returns an array of elements that are present in both arrays.
+   
+// function arrayIntersection(arr1, arr2) {
+    
+//     return arr1.filter((el) => arr2.includes(el));
+// }
+
+// // Example usage:
+// console.log(arrayIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
+
+// Task 16
+
+// Write a function that removes all falsy values from an array.
+
+
+// function removeFalsyValues(arr) {
+//     // const value = false;
+
+//     // if (value) {
+//     //     console.log(true);
+//     // } else {
+//     //     console.log(false);
+//     // }
+
+//     // console.log(arr);
+//     return arr.filter((value) => value);
+    
+// }
+
+// // Example usage:
+// console.log(removeFalsyValues([0, 1, false, 2, '', 3, 'a', 'e'*23, NaN, 's', 34])); // Output: [1, 2, 3, 'a', 's', 34]
+
+// Task 17
+// Write a function that takes an array of numbers from 1 to n with one missing number, and finds the missing number.
+
+// function findMissingNumber(arr, n) {
+
+//     for (let i = 1; i <= n; i++){
+//         if (!arr.includes(i)) {
+//             return i;
+//         }
+//     }
+    
+// }
+
+// // Example usage:
+// console.log(findMissingNumber([1, 2, 4, 5, 6], 6)); // Output: 3
+
+// function filterArray(arr){
+
+//     let newArr = [];
+
+//     arr.forEach((el) => {
+//         if (!isNaN(el) && !newArr.includes(+(el))) {
+//             newArr.push(+(el));
+//         }
+//     })
+
+//     return newArr;
+// }
+
+// console.log(filterArray([1, 2, "a", "b"])) // [1, 2]
+// console.log(filterArray([1, "a", "b", 0, 15])) // [1, 0, 15]
+// console.log(filterArray([1, 2, "aasf", "1", "123", 123])) // [1, 2, 123]
+
