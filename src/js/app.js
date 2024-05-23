@@ -337,3 +337,87 @@
 // console.log(filterArray([1, "a", "b", 0, 15])) // [1, 0, 15]
 // console.log(filterArray([1, 2, "aasf", "1", "123", 123])) // [1, 2, 123]
 
+// Task 18
+
+// function sumAndProduct(arr){
+//     // 15, 120
+//     let addition = arr.reduce((total, value) => total + value, 0);
+//     let multiply = arr.reduce((total, value) => total * value, 1);
+//     console.log(`Addition: ${addition}, multiplication: ${multiply}`);
+// }
+
+// sumAndProduct([1,2,3,4,5]);
+
+// Task 19
+// function deleteItem(arr, item){
+
+// my code
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] == item) {
+//             arr.splice(i, 1);
+//         }
+//     }
+
+//     console.log(arr);
+// }
+// Mentor's code
+// const index = arr.indexOf(item);
+// arr.splice(index, 1);
+// console.log(arr);
+
+// deleteItem([2,3,4,6,10],10);
+
+// Task 20
+
+// function findMissing(arr, item){
+//     let əslindəOlmalıİdi = (item * (item + 1) / 2);
+//     console.log(əslindəOlmalıİdi);
+
+//     let cariOlan = arr.reduce((sum, item) => sum + item, 0);
+//     console.log(cariOlan);
+
+//     let fərq = əslindəOlmalıİdi - cariOlan;
+//     console.log(fərq);
+// }
+
+// findMissing([1,3,4,5], 5);
+
+// Task 21
+
+// function selectNumbers(text){
+//     const arr = text.split('');
+//     console.log(arr);
+
+//     const deleteValue = arr.filter((i) => !isNaN(i));
+//     console.log(deleteValue);
+// }
+
+// selectNumbers('lorem20ipsim34dolor40');
+
+// Task 22
+
+// function formatPhoneNumber(numbers) {
+    
+//     let format = "(xxx) xxx-xxxx";
+//     return numbers.map((item) => (format = format.replace('x', item)))[numbers.length-1];
+// }
+
+// console.log(formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])) // "(123) 456-7890"
+// console.log(formatPhoneNumber([5, 1, 9, 5, 5, 5, 4, 4, 6, 8])) // "(519) 555-4468"
+// console.log(formatPhoneNumber([3, 4, 5, 5, 0, 1, 2, 5, 2, 7])) // "(345) 501-2527"
+
+// Task 23
+
+// function isAvgWhole(arr) {
+//     let average = arr.reduce((sum, el) => (el + sum)/arr.length);
+
+//     parseInt(average) === average;
+// }
+
+// console.log(isAvgWhole([1, 3])) // true
+// console.log(isAvgWhole([1, 2, 3, 4])) // false
+// console.log(isAvgWhole([1, 5, 6])) // true
+// console.log(isAvgWhole([1, 1, 1])) // true
+// console.log(isAvgWhole([9, 2, 2, 5])) // false
+
+// Researching the solution of the code
