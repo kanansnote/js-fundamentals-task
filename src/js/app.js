@@ -409,15 +409,13 @@
 // Task 23
 
 // function isAvgWhole(arr) {
-//     let average = arr.reduce((sum, el) => (el + sum)/arr.length);
-
-//     parseInt(average) === average;
+//     let sum = arr.reduce((sum, el) => sum + el, 0);
+//     let average = sum / arr.length;
+//     return Number.isInteger(average);
 // }
 
-// console.log(isAvgWhole([1, 3])) // true
-// console.log(isAvgWhole([1, 2, 3, 4])) // false
-// console.log(isAvgWhole([1, 5, 6])) // true
-// console.log(isAvgWhole([1, 1, 1])) // true
-// console.log(isAvgWhole([9, 2, 2, 5])) // false
-
-// Researching the solution of the code
+// console.log(isAvgWhole([1, 3])); // true
+// console.log(isAvgWhole([1, 2, 3, 4])); // false
+// console.log(isAvgWhole([1, 5, 6])); // true
+// console.log(isAvgWhole([1, 1, 1])); // true
+// console.log(isAvgWhole([9, 2, 2, 5])); // false
