@@ -423,73 +423,164 @@
 // Task 24
 // Objects
 
-const game = {
-	team1: "Bayern Munich",
-	team2: "Borrussia Dortmund",
-	players: [
-		[
-			"Neuer",
-			"Pavard",
-			"Martinez",
-			"Alaba",
-			"Davies",
-			"Kimmich",
-			"Goretzka",
-			"Coman",
-			"Muller",
-			"Gnarby",
-			"Lewandowski",
-		],
-		[
-			"Burki",
-			"Schulz",
-			"Hummels",
-			"Akanji",
-			"Hakimi",
-			"Weigl",
-			"Witsel",
-			"Hazard",
-			"Brandt",
-			"Sancho",
-			"Gotze",
-		],
-	],
-	score: "4:0",
-	scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
-	date: "Nov 9th, 2037",
-	odds: {
-		team1: 1.33,
-		x: 3.25,
-		team2: 6.5,
-	},
-};
-// Task-1
-const [players1, players2] = game.players;
+// const game = {
+// 	team1: "Bayern Munich",
+// 	team2: "Borrussia Dortmund",
+// 	players: [
+// 		[
+// 			"Neuer",
+// 			"Pavard",
+// 			"Martinez",
+// 			"Alaba",
+// 			"Davies",
+// 			"Kimmich",
+// 			"Goretzka",
+// 			"Coman",
+// 			"Muller",
+// 			"Gnarby",
+// 			"Lewandowski",
+// 		],
+// 		[
+// 			"Burki",
+// 			"Schulz",
+// 			"Hummels",
+// 			"Akanji",
+// 			"Hakimi",
+// 			"Weigl",
+// 			"Witsel",
+// 			"Hazard",
+// 			"Brandt",
+// 			"Sancho",
+// 			"Gotze",
+// 		],
+// 	],
+// 	score: "4:0",
+// 	scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+// 	date: "Nov 9th, 2037",
+// 	odds: {
+// 		team1: 1.33,
+// 		x: 3.25,
+// 		team2: 6.5,
+// 	},
+// };
+// // Task-1
+// const [players1, players2] = game.players;
 
-// Task-2
-const [gk, ...fieldPlayers] = players1;
-// console.log(gk);
-// console.log(fieldPlayers);
+// // Task-2
+// const [gk, ...fieldPlayers] = players1;
+// // console.log(gk);
+// // console.log(fieldPlayers);
 
-// Task-3
+// // Task-3
 
-const allPlayers = [...players1, ...players2];
-// console.log(allPlayers);
+// const allPlayers = [...players1, ...players2];
+// // console.log(allPlayers);
   
-// Task-4
-const players1Final = [...players1,'Thiago', 'Coutinho', 'Perisic'];
-console.log(players1Final);
+// // Task-4
+// const players1Final = [...players1,'Thiago', 'Coutinho', 'Perisic'];
+// console.log(players1Final);
 
-// Task-5
-const { team1, x: draw, team2 } = game.odds;
-console.log(team1, draw, team2);
+// // Task-5
+// const { team1, x: draw, team2 } = game.odds;
+// console.log(team1, draw, team2);
 
-// Task-6
-function printGoals(...arr) {
-    console.log(arr);
-}
+// // Task-6
+// function printGoals(...arr) {
+//     console.log(arr);
+// }
 
-printGoals('Witsel', 'Hazard');
+// printGoals('Witsel', 'Hazard');
 
-// Task-7
-console.log(team1 > team2);
+// // Task-7
+// console.log(team1 > team2);
+
+// Task 25
+// function numInStr(arr) {
+// 	const result = [];
+
+// 	arr.forEach((item) => {
+// 		if (item.split(''.some((item) => !isNaN(item) && item !== '')){
+// 			result.push(item);
+// 		}
+// 	})
+	
+// 	console.log(result);
+// }
+
+// numInStr(["1a", "a", "2b", "b"]);
+
+// Task 26
+
+// function secondLargest(arr) {
+// 	let newArr = arr.toSorted((a, b) => b - a);
+// 	console.log(newArr[1]);
+// }
+
+// secondLargest([10, 40, 30, 20, 50]);
+
+// Task 27
+
+// function reverseWords(str) {
+// 	let arr = str.split(' ');
+// 	let reversed = arr.reverse();
+// 	let deletedSpaces = reversed.filter(item => item !== '');
+// 	let joinedArr = deletedSpaces.join(" ");
+// 	console.log(joinedArr);
+// }
+
+// reverseWords(" the sky is blue");
+// reverseWords("hello   world!  ");
+// reverseWords("a good example");
+
+// Task 28
+
+// function reverseCase(str) {
+// 	let result = '';
+
+// 	for (let index = 0; index < str.length; index++) {
+
+// 		let letter = str[index];
+
+// 		if (letter === letter.toUpperCase()) {
+// 			result += letter.toLowerCase();
+// 		} else {
+// 			result += letter.toUpperCase();
+// 		}
+		
+// 	}
+	
+// 	console.log(result);
+// 	// let UpperCased = arr.slice(0, 1);
+// 	// console.log(UpperCased);
+
+// 	// let forEached = arr.forEach(item => item.);
+// 	// console.log(forEached);
+// }
+
+// reverseCase("Happy Birthday");
+// reverseCase("MANY THANKS");
+// reverseCase("sPoNtAnEoUs");
+
+// Task 29
+
+// function getAbsSum(arr) {
+// 	let reduced = arr.reduce((sum, item) => sum + Math.abs(item), 0);
+// 	console.log(reduced);
+// }
+
+// getAbsSum([2, -1, 4, 8, 10]);
+// getAbsSum([-3, -4, -10, -2, -3]);
+// getAbsSum([2, 4, 6, 8, 10]);
+// getAbsSum([-1]);
+
+// Task 30
+
+// function maxTotal(arr) {
+// 	const sorted = arr.sort((a, b) => b - a); 
+// 	console.log(sorted);
+
+// 	const reduced = sorted.slice(0, 5).reduce((sum, item) => sum + item, 0);
+// 	console.log(reduced);
+// }
+
+// maxTotal([1, 1, 0, 1, 3, 10, 10, 10, 10, 1]);
