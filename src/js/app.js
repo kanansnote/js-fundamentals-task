@@ -576,7 +576,7 @@
 // Task 30
 
 // function maxTotal(arr) {
-// 	const sorted = arr.sort((a, b) => b - a); 
+// 	const sorted = arr.sort((a, b) => b - a);
 // 	console.log(sorted);
 
 // 	const reduced = sorted.slice(0, 5).reduce((sum, item) => sum + item, 0);
@@ -584,3 +584,67 @@
 // }
 
 // maxTotal([1, 1, 0, 1, 3, 10, 10, 10, 10, 1]);
+
+// Task 31
+
+// function commonElements(array1, array2) {
+    // let result = [];
+    // let final = [];
+
+    // for (let item of array1) {
+    //     if (array2.includes(item)) {
+    //         result.push(item);
+    //     }
+    // }
+
+    // console.log(new Set(result));
+
+    // return array2.filter((index) => array1.includes(index));
+// }
+
+// console.log(commonElements([1, 2, 2, 2, 3, 4, 5], [1, 2, 4, 5]));
+// commonElements([1, 2, 2, 2, 3, 4, 5], [1, 2, 4, 5]);
+
+// Task 32
+
+// function specialReverse(str, letter) {
+    
+//     const arr = str.split(' ');
+//     let result = [];
+    
+    // arr.forEach((item) => {
+    //     if (item.startsWith(letter)) {
+    //         result.push(item.split('').reverse().join(''))
+    //     } else {
+    //         result.push(item)
+    //     }
+    // });
+
+    // console.log(result.join(' '));
+
+// }
+
+// specialReverse("word searches are super fun", "s");
+
+// Task 33
+
+// function doubleLetters(str) {
+
+//     // const result = [];
+
+//     // for (let index = 0; index < str.length; index++) {
+        
+//     //     if (str[index] == str[index + 1]) {
+//     //         result.push(true)
+//     //     } else {
+//     //         result.push(false);
+//     //     }
+//     // }
+
+//     // console.log(result.some((item) => item));
+
+//     return str.split('').some((item, index, array) => item == array[index + 1]);
+// }
+
+// console.log(doubleLetters('loop')) // true
+// console.log(doubleLetters('orange')) // false
