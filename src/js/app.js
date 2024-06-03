@@ -17,7 +17,7 @@
 // function squareSum(numbers){
 //     numbers = [1, 2, 2];
 //     let sum = 0;
-    
+
 //     for (let i = 0; i < numbers.length; i++) {
 //         let numbersPowed = numbers[i]**2;
 //         sum += numbersPowed;
@@ -52,7 +52,6 @@
 // console.log(squareSum([1, 2]));
 // console.log(squareSum([0, 3, 4, 5]));
 
-
 // Task 3
 
 // function findUniqueElements(text) {
@@ -78,17 +77,17 @@
 
 // function camelize(text) {
 
-    // My Code
-    // let strArray = str.split('-');
-    // // console.log(strArray);
-    // let arrayCamelize = strArray[strArray.length - 1];
-    // let firstLetterUppercased = arrayCamelize.slice(0, 1).toUpperCase();
-    // let otherRemainingsFromSlice = arrayCamelize.slice(1);
-    // let remainingString = strArray[0] + firstLetterUppercased + otherRemainingsFromSlice;
-    // let firstDashedWord = ;
-    // console.log(remainingString);
+// My Code
+// let strArray = str.split('-');
+// // console.log(strArray);
+// let arrayCamelize = strArray[strArray.length - 1];
+// let firstLetterUppercased = arrayCamelize.slice(0, 1).toUpperCase();
+// let otherRemainingsFromSlice = arrayCamelize.slice(1);
+// let remainingString = strArray[0] + firstLetterUppercased + otherRemainingsFromSlice;
+// let firstDashedWord = ;
+// console.log(remainingString);
 
-    // Mentor's Code
+// Mentor's Code
 
 //     const arr = text.split('-');
 //     const newArr = [];
@@ -135,7 +134,7 @@
 // function oddEvenNumbers(arr){
 
 //     let newArr = [];
-    
+
 //     for (let i = 0; i < arr.length; i++) {
 //         if (!(i % 2 == 0)) {
 //             newArr.push(arr[i]*2);
@@ -154,7 +153,7 @@
 // function removeSmallest(arr) {
 //     let smallNumber = arr[0];
 //     let newArr = [];
-    
+
 //     for (let i = 0; i < arr.length; i++){
 
 //         if (smallNumber < arr[i]) {
@@ -177,9 +176,9 @@
 //     let arr = text.split(',');
 //     let arrIndex0 = arr[0];
 //     let arrIndex1 = arr[1];
-    
+
 //     for (let i = 0; i < arr.length; i++){
-        
+
 //         if (i % 2 == 0){
 //             arrIndex0[0].toUpperCase();
 //             console.log(arrIndex0);
@@ -188,7 +187,7 @@
 //         }
 
 //     }
-    
+
 //     console.log(arr);
 // }
 
@@ -257,7 +256,7 @@
 //         } else {
 //             newArr.push(false);
 //         }
-    
+
 //     }
 
 //     if (newArr.includes(false)) {
@@ -273,9 +272,9 @@
 
 // Task 15
 // Write a function that takes two arrays and returns an array of elements that are present in both arrays.
-   
+
 // function arrayIntersection(arr1, arr2) {
-    
+
 //     return arr1.filter((el) => arr2.includes(el));
 // }
 
@@ -285,7 +284,6 @@
 // Task 16
 
 // Write a function that removes all falsy values from an array.
-
 
 // function removeFalsyValues(arr) {
 //     // const value = false;
@@ -298,7 +296,7 @@
 
 //     // console.log(arr);
 //     return arr.filter((value) => value);
-    
+
 // }
 
 // // Example usage:
@@ -314,7 +312,7 @@
 //             return i;
 //         }
 //     }
-    
+
 // }
 
 // // Example usage:
@@ -397,7 +395,7 @@
 // Task 22
 
 // function formatPhoneNumber(numbers) {
-    
+
 //     let format = "(xxx) xxx-xxxx";
 //     return numbers.map((item) => (format = format.replace('x', item)))[numbers.length-1];
 // }
@@ -475,7 +473,7 @@
 
 // const allPlayers = [...players1, ...players2];
 // // console.log(allPlayers);
-  
+
 // // Task-4
 // const players1Final = [...players1,'Thiago', 'Coutinho', 'Perisic'];
 // console.log(players1Final);
@@ -503,7 +501,7 @@
 // 			result.push(item);
 // 		}
 // 	})
-	
+
 // 	console.log(result);
 // }
 
@@ -546,9 +544,9 @@
 // 		} else {
 // 			result += letter.toUpperCase();
 // 		}
-		
+
 // 	}
-	
+
 // 	console.log(result);
 // 	// let UpperCased = arr.slice(0, 1);
 // 	// console.log(UpperCased);
@@ -588,18 +586,18 @@
 // Task 31
 
 // function commonElements(array1, array2) {
-    // let result = [];
-    // let final = [];
+// let result = [];
+// let final = [];
 
-    // for (let item of array1) {
-    //     if (array2.includes(item)) {
-    //         result.push(item);
-    //     }
-    // }
+// for (let item of array1) {
+//     if (array2.includes(item)) {
+//         result.push(item);
+//     }
+// }
 
-    // console.log(new Set(result));
+// console.log(new Set(result));
 
-    // return array2.filter((index) => array1.includes(index));
+// return array2.filter((index) => array1.includes(index));
 // }
 
 // console.log(commonElements([1, 2, 2, 2, 3, 4, 5], [1, 2, 4, 5]));
@@ -608,19 +606,19 @@
 // Task 32
 
 // function specialReverse(str, letter) {
-    
+
 //     const arr = str.split(' ');
 //     let result = [];
-    
-    // arr.forEach((item) => {
-    //     if (item.startsWith(letter)) {
-    //         result.push(item.split('').reverse().join(''))
-    //     } else {
-    //         result.push(item)
-    //     }
-    // });
 
-    // console.log(result.join(' '));
+// arr.forEach((item) => {
+//     if (item.startsWith(letter)) {
+//         result.push(item.split('').reverse().join(''))
+//     } else {
+//         result.push(item)
+//     }
+// });
+
+// console.log(result.join(' '));
 
 // }
 
@@ -633,7 +631,7 @@
 //     // const result = [];
 
 //     // for (let index = 0; index < str.length; index++) {
-        
+
 //     //     if (str[index] == str[index + 1]) {
 //     //         result.push(true)
 //     //     } else {
@@ -648,3 +646,114 @@
 
 // console.log(doubleLetters('loop')) // true
 // console.log(doubleLetters('orange')) // false
+
+// Task 34
+
+// function removeABC(str) {
+//     const arr = str.split('').filter();
+//     console.log(arr)
+// }
+
+// removeABC("This might be a bit hard") // "This might e  it hrd"
+// removeABC("hello world!") // null
+// removeABC("") // null
+
+// Task 35
+
+// function Accumulator(startingValue) {
+//     this.value = startingValue;
+//     this.read = () => (this.value += Number(prompt('Ədəd daxil et')));
+// }
+
+// const vüsal = new Accumulator(1);
+
+// vüsal.read();
+// alert(vüsal.value);
+
+// Task 36
+
+// function Calculator() {
+
+//     this.a = prompt('');
+//     this.b = prompt('');
+
+//     this.read =
+//     this.sum =
+//     this.mul =
+// }
+
+// let calculator = new Calculator();
+// calculator.read();
+
+// alert("Sum = " calculator.sum());
+// alert("Sum = " calculator.mul());
+
+// Task 37
+
+function textToNumberBinary(str) {
+	// my code
+	// console.log(str.split(' ').filter((item) => ));
+
+	// const array = str.split(' ');
+	// // console.log(arr);
+	// const newArray = [];
+
+	// for (let index = 0; index < array.length; index++) {
+
+	//     if (array.includes('zero') && array.includes('one')) {
+	//         newArray.push('01');
+
+	//         if (array.length <= 8) {
+	//             newArray.push()
+	//         }
+	//     } else {
+	//         newArray.push('');
+	//     }
+
+	// }
+
+	// return newArray.join('');
+
+	// mentor's code (something wrong that will try to fix it later)
+	const arr = str
+		.toLowerCase()
+		.split(" ")
+		.map((item) => {
+			if (item === "zero") {
+				return "0";
+			} else if (item === "one") {
+				return "1";
+			} else {
+				return "";
+			}
+		})
+		.filter((item) => item.length > 0);
+
+	const remain = arr.length % 8;
+
+	if (remain == 0) {
+		return arr.join("");
+	} else {
+		return arr.slice(0, arr.length - remain).join("");
+	}
+}
+
+console.log(textToNumberBinary("zero one zero one zero one zero two three"));
+
+// function convert(text) {
+//     // const splitReverseJoin = text.split(" ").reverse();
+//     // for (let index = 0; index < text.length; index++) {
+//     //     if (text.)
+//     // }
+
+//     return text.split("").reverse().map((item) => {
+//         if (item === item.toLowerCase()) {
+//             return item.toUpperCase();
+//         } else {
+//             return item.toLowerCase();
+//         }
+//     }).join("");
+
+// }
+
+// console.log(convert("heLLo WOrld"));
