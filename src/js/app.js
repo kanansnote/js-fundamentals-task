@@ -760,14 +760,119 @@
 
 // console.log(convert("heLLo WOrld"));
 
-// Task 38 (Not solved)
+// Task 38
 
-function removeABC(str) {
+// function removeABC(str) {
 	// console.log(str.split('').map(item => item.replace('a', '') && item.replace('b', '') && item.replace('c', '') || console.log(null)).join(''));
-	console.log(str.split('').filter(item => !item.includes('a') && !item.includes('b') && !item.includes('c')).join(''));
+	// console.log(str.split('').filter(item => !item.includes('a') && !item.includes('b') && !item.includes('c')).join(''));
 	// console.log(str.split(' '));
-}
 
-removeABC("This might be a bit hard") // "This might e  it hrd"
-removeABC("hello world!") // null
-removeABC("") // null
+// 	const arr = str.split('');
+// 	console.log(arr);
+
+// 	for (let index = 0; index < arr.length; index++) {
+
+// 		if (arr.includes('a') && arr.includes('b') && arr.includes('c')) {
+// 			arr.push();
+// 		} else if (arr.includes('')) {
+// 			return null;
+// 		} else {
+// 			return null;
+// 		}
+		
+// 		return arr.join(' ');
+// 	}
+
+// }
+
+// console.log(removeABC("This might be a bit hard")) // "This might e  it hrd"
+// console.log(removeABC("hello world!")) // null
+// console.log(removeABC("")) // null
+
+
+// mentor's code
+// function removeABC(text) {
+// 	if (!text.includes('a') && !text.includes('b') && !text.includes('c')) {
+// 		return null
+// 	}
+
+// 	if (text.length === 0) {
+// 		return null;
+// 	}
+
+// 	let result = '';
+
+// 	for (let item of text) {
+// 		if (item !== 'a' && item !== 'b' && item !== 'c') {
+// 			result += item;
+// 		}
+// 	}
+
+// 	return result;
+// }
+
+// console.log(removeABC('This might be a bit hard'));
+// console.log(removeABC('hello world'));
+// console.log(removeABC(''));
+
+// Task 39
+
+// function inclusiveArray(startNum, endNum) {
+// 	const result = [];
+
+// 	if (startNum > endNum) {
+// 		result.push(startNum)
+// 		return result;
+// 	}
+
+// 	for (let index = startNum; index <= endNum; index++) {
+// 		result.push(index);
+// 	}
+
+// 	return result;
+// }
+
+// console.log(inclusiveArray(1, 5));
+// console.log(inclusiveArray(17, 5));
+
+// Task 40
+
+// function calculate(str) {
+
+// 	// return str.split(' ').map(item => {
+// 	// 	if (item.includes('k')) {
+// 	// 		return parseFloat(item)*1000;
+// 	// 	} else {
+// 	// 		return +item;
+// 	// 	}
+// 	// });
+
+// 	return str.split(' ').map(item => item.includes('k') ? parseFloat(item) * 1000 : +item);
+// }
+
+// console.log(calculate('2.5k 65k 348')) // [2500, 65000, 348]
+
+// Task 41
+
+// function mapping(arr) {
+// 	const obj = {};
+
+// 	for (let item of arr) {
+// 		obj[item] = item.toUpperCase()
+// 	}
+
+// 	return obj
+
+// }
+
+// console.log(mapping(['p','s']));
+
+// Task 42
+
+// function reverseAndNot(text) {
+// 	console.log(String(text).split('').reverse().join('')+text);
+// }
+
+// reverseAndNot(123);
+// reverseAndNot(152);
+// reverseAndNot(123456789);
