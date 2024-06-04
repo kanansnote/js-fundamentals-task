@@ -690,7 +690,7 @@
 
 // Task 37
 
-function textToNumberBinary(str) {
+// function textToNumberBinary(str) {
 	// my code
 	// console.log(str.split(' ').filter((item) => ));
 
@@ -714,31 +714,33 @@ function textToNumberBinary(str) {
 
 	// return newArray.join('');
 
-	// mentor's code (something wrong that will try to fix it later)
-	const arr = str
-		.toLowerCase()
-		.split(" ")
-		.map((item) => {
-			if (item === "zero") {
-				return "0";
-			} else if (item === "one") {
-				return "1";
-			} else {
-				return "";
-			}
-		})
-		.filter((item) => item.length > 0);
+	// mentor's code solved (kind of)
+// 	const arr = str
+// 		.toLowerCase()
+// 		.split(" ")
+// 		.map((item) => {
+// 			if (item === "zero") {
+// 				return "0";
+// 			} else if (item === "one") {
+// 				return "1";
+// 			} else {
+// 				return "";
+// 			}
+// 		})
+// 		.filter((item) => item.length > 0);
 
-	const remain = arr.length % 8;
+// 	const remain = arr.length % 8;
 
-	if (remain == 0) {
-		return arr.join("");
-	} else {
-		return arr.slice(0, arr.length - remain).join("");
-	}
-}
+// 	if (remain == 0) {
+// 		return arr.join("");
+// 	} else {
+// 		return arr.slice(0, arr.length - remain).join("");
+// 	}
 
-console.log(textToNumberBinary("zero one zero one zero one zero two three"));
+	
+// }
+
+// console.log(textToNumberBinary("zero one zero one zero one zero one two three"));
 
 // function convert(text) {
 //     // const splitReverseJoin = text.split(" ").reverse();
@@ -757,3 +759,15 @@ console.log(textToNumberBinary("zero one zero one zero one zero two three"));
 // }
 
 // console.log(convert("heLLo WOrld"));
+
+// Task 38 (Not solved)
+
+function removeABC(str) {
+	// console.log(str.split('').map(item => item.replace('a', '') && item.replace('b', '') && item.replace('c', '') || console.log(null)).join(''));
+	console.log(str.split('').filter(item => !item.includes('a') && !item.includes('b') && !item.includes('c')).join(''));
+	// console.log(str.split(' '));
+}
+
+removeABC("This might be a bit hard") // "This might e  it hrd"
+removeABC("hello world!") // null
+removeABC("") // null
