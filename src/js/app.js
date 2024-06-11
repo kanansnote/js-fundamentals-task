@@ -957,3 +957,22 @@
 // console.log(maxPossible(523, 76));
 // console.log(maxPossible(9132, 5564));
 // console.log(maxPossible(8732, 91255));
+
+// Task 46
+
+// function getBestStudent(obj) {
+
+// 	for (let item in obj) {
+// 		let sum = obj[item].reduce((a, b) => a + b);
+// 		obj[item] = sum;
+
+// 		return Object.keys(obj).sort((a, b) => obj[b] - obj[a])[0];
+// 	}
+// }
+
+// console.log(getBestStudent({
+// 	John: [100, 90, 80],
+// 	Bob: [100, 70, 80]
+// }));
+
+
