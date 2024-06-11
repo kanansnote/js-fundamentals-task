@@ -876,3 +876,84 @@
 // reverseAndNot(123);
 // reverseAndNot(152);
 // reverseAndNot(123456789);
+
+// Task 43
+
+// function filterUnique(arr) {
+// 	// console.log(array.filter(item => item.length === new Set(item).size));
+
+// 	const result = [];
+
+// 	function isUnique(str) {
+// 		for (let i = 0; i < str.length; i++) {
+// 			for (j = i + 1; j < str.length; j++) {
+// 				if (str[i] == str[j]) {
+// 					return false;
+// 				}
+// 			}
+// 		}
+
+// 		return true;
+// 	}
+
+// 	for (let item of arr) {
+// 		if (isUnique(item)) {
+// 			result.push(item);
+// 		}
+// 	}
+
+// 	return result;
+// }
+
+// console.log(filterUnique(['abb', 'abc', 'abcdb']));
+
+// Task 44
+
+// function lonelyInteger(array) {
+
+// 	return array.map(item => {
+// 		if (item < 0) {
+// 			return Math.abs(item);
+// 		} else {
+// 			return item;
+// 		}
+// 	}).sort((a, b) => a - b).filter((item, index, array)=> item !== array[index + 1]);
+// }
+
+
+// console.log(lonelyInteger([1, -1, 2, -2, 3])); //3
+// console.log(lonelyInteger([-3, 1, 2, 3, -1, -4, -2])); // -4
+// console.log(lonelyInteger([-9, -105, -9, -9, -9, -9, 105])); // -9
+
+// Task 45
+
+// function maxPossible(num1, num2) {
+	
+// 	const num1str = num1.toString().split('');
+// 	const num2str = num2.toString().split('');
+
+// 	const num = [num1str, num2str];
+// 	const result = [];
+
+// 	if (num1str.length > num2str.length) {
+// 		num2str.push('0');
+// 	} else if (num1str.length < num2str.length) {
+// 		num1str.push('0');
+// 	}
+
+// 	for (let index = 0; index <= num.length; index++) {
+
+// 		if (num1str[index] < num2str[index]) {
+// 			result.push(num2str[index]);
+// 		} else {
+// 			result.push(num1str[index]);
+// 		}
+// 	}
+
+// 	return result.join('');
+
+// }
+
+// console.log(maxPossible(523, 76));
+// console.log(maxPossible(9132, 5564));
+// console.log(maxPossible(8732, 91255));
