@@ -691,30 +691,30 @@
 // Task 37
 
 // function textToNumberBinary(str) {
-	// my code
-	// console.log(str.split(' ').filter((item) => ));
+// my code
+// console.log(str.split(' ').filter((item) => ));
 
-	// const array = str.split(' ');
-	// // console.log(arr);
-	// const newArray = [];
+// const array = str.split(' ');
+// // console.log(arr);
+// const newArray = [];
 
-	// for (let index = 0; index < array.length; index++) {
+// for (let index = 0; index < array.length; index++) {
 
-	//     if (array.includes('zero') && array.includes('one')) {
-	//         newArray.push('01');
+//     if (array.includes('zero') && array.includes('one')) {
+//         newArray.push('01');
 
-	//         if (array.length <= 8) {
-	//             newArray.push()
-	//         }
-	//     } else {
-	//         newArray.push('');
-	//     }
+//         if (array.length <= 8) {
+//             newArray.push()
+//         }
+//     } else {
+//         newArray.push('');
+//     }
 
-	// }
+// }
 
-	// return newArray.join('');
+// return newArray.join('');
 
-	// mentor's code solved (kind of)
+// mentor's code solved (kind of)
 // 	const arr = str
 // 		.toLowerCase()
 // 		.split(" ")
@@ -737,7 +737,6 @@
 // 		return arr.slice(0, arr.length - remain).join("");
 // 	}
 
-	
 // }
 
 // console.log(textToNumberBinary("zero one zero one zero one zero one two three"));
@@ -763,9 +762,9 @@
 // Task 38
 
 // function removeABC(str) {
-	// console.log(str.split('').map(item => item.replace('a', '') && item.replace('b', '') && item.replace('c', '') || console.log(null)).join(''));
-	// console.log(str.split('').filter(item => !item.includes('a') && !item.includes('b') && !item.includes('c')).join(''));
-	// console.log(str.split(' '));
+// console.log(str.split('').map(item => item.replace('a', '') && item.replace('b', '') && item.replace('c', '') || console.log(null)).join(''));
+// console.log(str.split('').filter(item => !item.includes('a') && !item.includes('b') && !item.includes('c')).join(''));
+// console.log(str.split(' '));
 
 // 	const arr = str.split('');
 // 	console.log(arr);
@@ -779,7 +778,7 @@
 // 		} else {
 // 			return null;
 // 		}
-		
+
 // 		return arr.join(' ');
 // 	}
 
@@ -788,7 +787,6 @@
 // console.log(removeABC("This might be a bit hard")) // "This might e  it hrd"
 // console.log(removeABC("hello world!")) // null
 // console.log(removeABC("")) // null
-
 
 // mentor's code
 // function removeABC(text) {
@@ -920,7 +918,6 @@
 // 	}).sort((a, b) => a - b).filter((item, index, array)=> item !== array[index + 1]);
 // }
 
-
 // console.log(lonelyInteger([1, -1, 2, -2, 3])); //3
 // console.log(lonelyInteger([-3, 1, 2, 3, -1, -4, -2])); // -4
 // console.log(lonelyInteger([-9, -105, -9, -9, -9, -9, 105])); // -9
@@ -928,7 +925,7 @@
 // Task 45
 
 // function maxPossible(num1, num2) {
-	
+
 // 	const num1str = num1.toString().split('');
 // 	const num2str = num2.toString().split('');
 
@@ -975,4 +972,57 @@
 // 	Bob: [100, 70, 80]
 // }));
 
+// Task 47
 
+// function twoDifference(input) {
+
+// 	const arr = input.sort((a, b) => a - b);
+// 	const result = [];
+
+// 	for (let item of arr) {
+// 		for (let num of arr) {
+// 			if (num - item == 2) {
+// 				result.push([item, num]);
+// 			}
+// 		}
+// 	}
+
+// 	return result;
+// }
+
+// console.log(twoDifference([1,2,3,4])); // [[1,3],[2,4]]
+// console.log(twoDifference([4,1,2,3])); // [[1,3],[2,4]]
+// console.log(twoDifference([1,23,3,4,7])); // [[1,3]]
+// console.log(twoDifference([4,3,1,5,6])); // [[1,3], [3,5], [4,6]]
+
+// Task 48
+
+// function withoutLast(arr) {
+// 	const myArr = arr.slice();
+// 	myArr.pop();
+// 	return myArr;
+// }
+
+// console.log(withoutLast([1,2,3,4,5]));
+
+// Task 49
+
+// function oddNumbers(arr) {
+
+// 	for (let i = 0; i < arr.length; i++) {
+// 		for (let k = 0; k < arr.length; k++) {
+// 			if (arr[i] % 2 == 1 && arr[k] % 2 == 1) {
+// 				if (arr[i] < arr[k]){
+// 					let c = arr[i];
+// 					arr[i] = arr[k];
+// 					arr[k] = c;
+// 				}
+// 			}
+			
+// 		}
+// 	}
+
+// 	return arr;
+// }
+
+// console.log(oddNumbers([14, 7, 1, 2, 4]));
