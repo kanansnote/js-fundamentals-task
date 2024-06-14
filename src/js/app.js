@@ -1,3 +1,5 @@
+'use strict';
+
 // Task 1
 
 // const turnOffButton = document.getElementById('turnOffButton');
@@ -907,20 +909,8 @@
 
 // Task 44
 
-// function lonelyInteger(array) {
-
-//     const newArr = [];
-
-//     for (let i = 0; i < array.length; i++) {
-            
-//         if (array[i] == Math.abs(array[i + 1])) {
-//             newArr.push(true);
-//         } else {
-//             newArr.push(false);
-//         }
-//     }
-
-//     return newArr;
+// function lonelyInteger(arr) {
+//     return arr.sort((a, b) => Math.abs(a) - Math.abs(b));
 // }
 
 // console.log(lonelyInteger([1, -1, 2, -2, 3])); //3
@@ -1032,3 +1022,53 @@
 
 // console.log(oddNumbers([14, 7, 1, 2, 4]));
 
+// Task 50
+
+// function askPassword(ok, fail){
+
+//     let password = prompt("Password?", '');
+//     if (password == 'rockstar') ok();
+//     else fail();
+// }
+
+// let user = {
+//     name: 'John',
+
+//     loginOk() {
+//         alert(`${this.name} logged in`);
+//     },
+
+//     loginFail() {
+//         alert(`${this.name} failed to log in`);
+//     },
+// }
+
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+// Task 51
+
+// function askPassword(ok, fail){
+
+//     let password = prompt("Password?", '');
+//     if (password == 'rockstar') ok();
+//     else fail();
+// }
+
+// let user = {
+//     name: 'John',
+
+//     login(result) {
+//         alert(this.name + (result ? ' logged in' : ' failed to log in'));
+//     }
+// }
+
+// askPassword(user.login.bind(user,true), user.login.bind(user,false));
+
+// Task 52
+
+// function mirror(arr) {
+//     const copyArr = arr.slice().reverse().slice(1);
+//     console.log(arr.concat(copyArr));
+// }
+
+// mirror([0, 2, 4, 6]);
