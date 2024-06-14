@@ -909,13 +909,18 @@
 
 // function lonelyInteger(array) {
 
-// 	return array.map(item => {
-// 		if (item < 0) {
-// 			return Math.abs(item);
-// 		} else {
-// 			return item;
-// 		}
-// 	}).sort((a, b) => a - b).filter((item, index, array)=> item !== array[index + 1]);
+//     const newArr = [];
+
+//     for (let i = 0; i < array.length; i++) {
+            
+//         if (array[i] == Math.abs(array[i + 1])) {
+//             newArr.push(true);
+//         } else {
+//             newArr.push(false);
+//         }
+//     }
+
+//     return newArr;
 // }
 
 // console.log(lonelyInteger([1, -1, 2, -2, 3])); //3
@@ -1026,3 +1031,4 @@
 // }
 
 // console.log(oddNumbers([14, 7, 1, 2, 4]));
+
