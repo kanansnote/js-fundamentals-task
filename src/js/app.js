@@ -909,19 +909,25 @@
 
 // Task 44
 
-function lonelyInteger(arr) {
-    return arr.sort((a,b)=>Math.abs(a) - Math.abs(b)).map((value, index, array) => {
-        if (Math.abs(array[index]) == Math.abs(array[index + 1])) {
-            return [array[index], array[index + 1]];
-        } else {
-            return [array[index + 1]];
-        }
-    }).filter((value, index, array)=> !Math.abs(array[index]) == Math.abs(array[index + 1]));
-}
+// function lonelyInteger(arr) {
 
-console.log(lonelyInteger([1, -1, 2, -2, 3])); //3
-console.log(lonelyInteger([-3, 1, 2, 3, -1, -4, -2])); // -4
-console.log(lonelyInteger([-9, -105, -9, -9, -9, -9, 105])); // -9
+    // My code
+    // return arr.sort((a,b)=>Math.abs(a) - Math.abs(b)).map((value, index, array) => {
+    //     if (Math.abs(array[index]) == Math.abs(array[index + 1])) {
+    //         return [array[index], array[index + 1]];
+    //     } else {
+    //         return [array[index + 1]];
+    //     }
+    // }).filter((value, index, array)=> !Math.abs(array[index]) == Math.abs(array[index + 1]));
+
+    // Shadman's code
+//     const newArr = [...new Set(arr)];
+//     return newArr.reduce((acc, cur)=> acc + cur);
+// }
+
+// console.log(lonelyInteger([1, -1, 2, -2, 3])); //3
+// console.log(lonelyInteger([-3, 1, 2, 3, -1, -4, -2])); // -4
+// console.log(lonelyInteger([-9, -105, -9, -9, -9, -9, 105])); // -9
 
 // Task 45
 
