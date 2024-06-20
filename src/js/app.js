@@ -1084,3 +1084,41 @@
 // }
 
 // mirror([0, 2, 4, 6]);
+
+// Task 53
+
+// function sharedLetters(str1, str2) {
+
+//     let result = '';
+
+//     for (let index = 0; index < str1.length; index++) {
+
+//         if (str1.includes(str2[index])) {
+//             result += str2[index]
+//         }
+        
+//     }
+    
+//     return result.length;
+// }
+
+// console.log(sharedLetters('apple', 'meaty')); // 2
+// console.log(sharedLetters('fan', 'forsook')); // 1
+
+// Task 54
+
+// const textarea = document.querySelector('textarea');
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', function () {
+
+//     const text = textarea.value;
+//     const array = text.split('\n');
+
+//     for (let index = 0; index < array.length; index++) {
+//         const [first, second] = array[index].toLowerCase().trim().split('_');
+//         const result = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
+//         console.log(result.padEnd(20," ") + '✅'.repeat(index+1));
+
+//     }
+// })
