@@ -1122,3 +1122,98 @@
 
 //     }
 // })
+
+// Task 55
+
+// function largestEven(array) {
+//    return array.filter(item => item % 2 == 0).sort((a, b) => b - a)[0] || -1;
+// }
+
+// console.log(largestEven([3, 7, 2, 1, 7, 9, 10, 13]));
+// console.log(largestEven([1, 3, 5, 7]));
+
+// Task 56
+
+// function uniqueArr(array) {
+//     return [...new Set(array)].filter(item => item > 0);
+
+//     // const filteredArray = array.filter(item => item > 0);
+//     // const result = [];
+
+//     // for (let item of filteredArray) {
+//     //     if (!result.includes(item)) {
+//     //         result.push(item);
+//     //     }
+//     // }
+
+//     // return result;
+// }
+
+// console.log(uniqueArr([-5, 1, -7, -5, -2, 3, 3, -5, -1, 1]));
+// console.log(uniqueArr([3, -3, -3, 5, 5, -6, -2, -4, -1, 3]));
+// console.log(uniqueArr([10, 6, -12, 13, 5, 5, 13, 6, 5]));
+
+// Task 57
+
+// function sumTwoSmallestNumbers(array) {
+//     return array.filter(item => item > 0).sort((a,b)=>a-b).slice(0,2).reduce((a,b)=> a+b);
+// }
+
+// console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+
+// Task 58
+
+// function findOccurences(str, letter) {
+//     const obj = {};
+//     // const arr = str.toLowerCase().split('');
+//     // return arr;
+
+//     str.toLowerCase().split(" ").forEach((word) => {
+//         const count = word.split("").filter((item) => item == letter).length;
+//         obj[word] = count;
+//     });
+
+//     return obj;
+
+// }
+
+// console.log(findOccurences('Hello World', 'o'));
+
+// Task 59
+
+// function stepsToConvert(text) {
+
+//     let lowerCount = 0;
+//     let upperCount = 0;
+
+//     for (let item of text) {
+//         if (item == item.toLowerCase()) {
+//             lowerCount++;
+//         } else {
+//             upperCount++;
+//         }
+//     }
+
+//     if (lowerCount < upperCount) {
+//         return lowerCount;
+//     } else {
+//         return upperCount;
+//     }
+
+// }
+
+// console.log(stepsToConvert('abC'));
+// console.log(stepsToConvert('ABc'));
+// console.log(stepsToConvert('ABC'));
+
+// Task 60
+
+// function objectToArray(obj) {
+//     return Object.entries(obj);
+// }
+
+// console.log(objectToArray({
+//     d: 1,
+//     b: 2,
+//     c: 3,
+// }));
