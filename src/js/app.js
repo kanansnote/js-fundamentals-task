@@ -932,35 +932,22 @@
 // Task 45
 
 // function maxPossible(num1, num2) {
+//     let num1Arr = num1.toString().split('');
+//     let num2Arr = num2.toString().split('').sort((a, b) => b - a);
 
-// 	const num1str = num1.toString().split('');
-// 	const num2str = num2.toString().split('');
+//     for (let i = 0; i < num1Arr.length; i++) {
+//         if (num2Arr[0] > num1Arr[i]) {
+//             num1Arr[i] = num2Arr.shift();
+//         }
+//     }
 
-// 	const num = [num1str, num2str];
-// 	const result = [];
-
-// 	if (num1str.length > num2str.length) {
-// 		num2str.push('0');
-// 	} else if (num1str.length < num2str.length) {
-// 		num1str.push('0');
-// 	}
-
-// 	for (let index = 0; index <= num.length; index++) {
-
-// 		if (num1str[index] < num2str[index]) {
-// 			result.push(num2str[index]);
-// 		} else {
-// 			result.push(num1str[index]);
-// 		}
-// 	}
-
-// 	return result.join('');
-
+//     return parseInt(num1Arr.join(''), 10);
 // }
 
-// console.log(maxPossible(523, 76));
-// console.log(maxPossible(9132, 5564));
-// console.log(maxPossible(8732, 91255));
+// console.log(maxPossible(523, 76));        // 763
+// console.log(maxPossible(9132, 5564));     // 9655
+// console.log(maxPossible(8732, 91255));    // 9755
+
 
 // Task 46
 
@@ -1165,9 +1152,6 @@
 
 // function findOccurences(str, letter) {
 //     const obj = {};
-//     // const arr = str.toLowerCase().split('');
-//     // return arr;
-
 //     str.toLowerCase().split(" ").forEach((word) => {
 //         const count = word.split("").filter((item) => item == letter).length;
 //         obj[word] = count;
@@ -1217,3 +1201,62 @@
 //     b: 2,
 //     c: 3,
 // }));
+
+// Task 61
+
+// function dividers(num) {
+//     const arr = [];
+
+//     for (let index = 1; index <= num; index++) {
+        
+//         if (num % index == 0) {
+//             arr.push(index);
+//         }
+//     }
+
+//     return arr;
+
+// }
+
+// console.log(dividers(12));
+
+// Task 62
+
+// function lettersOnly(str) {
+//     // return str.split(' ').every(item => /^[a-z]+$/.test(item)); (with regex method)
+
+//     if (str == "") {
+//         return false;
+//     }
+
+//     return str.split("").every((item) => {
+//         return (item >= "a" && item < "z") || item == "";
+//     })
+// }
+
+// console.log(lettersOnly('javascript'));
+// console.log(lettersOnly('JAVASCRIPT'));
+// console.log(lettersOnly('121212121'));
+// console.log(lettersOnly('i have spaces'));
+// console.log(lettersOnly('I have spaces(1-10)'));
+// console.log(lettersOnly(''));
+// console.log(lettersOnly('#'));
+
+// Task 63
+
+// function countPalindrome(start, end) {
+
+//     let palindrome = 0;
+
+//     for (let i = start; i <= end; i++) {
+//         if (i.toString() === i.toString().split('').reverse().join('')) {
+//             palindrome++;
+//         }
+//     }
+
+//     return palindrome;
+// }
+
+// console.log(countPalindrome(1, 10));
+// console.log(countPalindrome(555, 556));
+// console.log(countPalindrome(878, 898));
