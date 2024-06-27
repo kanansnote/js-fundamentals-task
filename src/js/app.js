@@ -1260,3 +1260,62 @@
 // console.log(countPalindrome(1, 10));
 // console.log(countPalindrome(555, 556));
 // console.log(countPalindrome(878, 898));
+
+// Task 64
+// let a = 5;
+
+// function test() {
+//     console.log(a);
+//     let a = 10;
+// }
+
+// test();
+
+// Task 65
+
+// function mean(num) {
+//     const arr = num.toString().split('').map(Number);
+//     return arr.reduce((a,b)=> a + b, 0)/arr.length;
+// }
+
+// console.log(mean(42));
+// console.log(mean(12345));
+// console.log(mean(666));
+
+// Task 66
+// function isIsogram(str) {
+//     // const arr = str.toLowerCase().split('');
+
+// }
+
+// console.log(isIsogram("Algorism")) // true
+// console.log(isIsogram("PasSword")) // false
+// console.log(isIsogram("Consecutive")) // false
+
+// Task 67
+
+// function reorderDigits(arr, keyword) {
+// }
+
+// console.log(reorderDigits([515, 341, 98, 44, 211], "asc"));
+// console.log(reorderDigits([515, 341, 98, 44, 211], "desc"));
+
+// Task 68
+
+// function sortByString(arr, keyword) {
+//     const splitKeyword = keyword.split('');
+//     return arr.sort((a,b)=> splitKeyword.indexOf(a[0])-splitKeyword.indexOf(b[0]));
+// }
+
+// console.log(sortByString(["apple", "banana", "cherry", "date"], "dbca"));
+
+// Task 69
+
+// function toArrowFunction(str) {
+//     const arr = str.split(' ');
+//     return arr[0].replace('function', 'const ') + arr[1].replace('(', ' = (') + arr[2].replace('{}', ' =>');
+// }
+
+// console.log(toArrowFunction("function test(a) {}")); // "const test = (a) =>"
+// console.log(toArrowFunction("function twoArgs(a,b) {}")); // "const twoArgs = (a,b) =>"
+// console.log(toArrowFunction("function restArgs(...a) {}")); // "const restArgs = (...a) =>"
