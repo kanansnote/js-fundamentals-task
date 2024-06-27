@@ -1284,7 +1284,16 @@
 
 // Task 66
 // function isIsogram(str) {
-//     // const arr = str.toLowerCase().split('');
+    // const text = str.toLowerCase();
+    // const result = new Set(text);
+
+    // if (result.size == str.length) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+
+    // return str.toLowerCase().split("").every((item, index, array) => array.indexOf(item) == array.lastIndexOf(item));
 
 // }
 
@@ -1295,6 +1304,7 @@
 // Task 67
 
 // function reorderDigits(arr, keyword) {
+//     return arr.map(item => item.toString().split('').sort((a, b) => (keyword == 'asc') ? a - b : b - a).join(''));
 // }
 
 // console.log(reorderDigits([515, 341, 98, 44, 211], "asc"));
@@ -1319,3 +1329,49 @@
 // console.log(toArrowFunction("function test(a) {}")); // "const test = (a) =>"
 // console.log(toArrowFunction("function twoArgs(a,b) {}")); // "const twoArgs = (a,b) =>"
 // console.log(toArrowFunction("function restArgs(...a) {}")); // "const restArgs = (...a) =>"
+
+// Task 70
+
+// function incrementToTop(arr) {
+//     const max = Math.max(...arr);
+//     return arr.map(item => max - item).reduce((sum, item) => sum + item);
+// }
+
+// console.log(incrementToTop([3, 4, 5]));
+
+// Task 71
+// function lastDig(...arr) {
+//     const lastDigits = arr.map(item => String(item).at(-1));
+
+//     if (String(lastDigits[0] * lastDigits[1]).at(-1) == lastDigits.at(-1)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(lastDig(25, 21, 125));
+// console.log(lastDig(55, 226, 5190));
+// console.log(lastDig(12, 215, 2142));
+
+// Task 72
+
+// function divisibleByLeft(num) {
+//     const arr = [];
+//     const strNum = num.toString().split('');
+
+//     for (let i = 0; i < strNum.length; i++) {
+        
+//         if (strNum[i] % strNum[i - 1] == 0) {
+//             arr.push(true);
+//         } else {
+//             arr.push(false);
+//         }
+//     }
+
+//     return arr;
+// }
+
+// console.log(divisibleByLeft(73312));
+// console.log(divisibleByLeft(635));
+// console.log(divisibleByLeft(1));
