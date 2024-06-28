@@ -1375,3 +1375,81 @@
 // console.log(divisibleByLeft(73312));
 // console.log(divisibleByLeft(635));
 // console.log(divisibleByLeft(1));
+
+
+// Task 73
+
+// function rearrangedDifference(num) {
+//     const numStr = num.toString().split('');
+//     const numStrAsc = numStr.sort((a, b) => a - b).join('');
+//     const numStrDes = numStr.sort((a, b) => b - a).join('');
+//     return numStrDes - numStrAsc;
+// }
+
+// console.log(rearrangedDifference(972882)); // 760833
+// console.log(rearrangedDifference(3320707)); // 7709823
+// console.log(rearrangedDifference(90010)); // 90981
+
+// Task 74 (Unsolved)
+
+// function getStudentTopNotes(obj) {
+//     this.name;
+// }
+
+// console.log(getStudentTopNotes([
+//   {
+//     id: 1,
+//     name: "Jacek",
+//     notes: [5, 3, 4, 2, 5, 5]
+//   },
+//   {
+//     id: 2,
+//     name: "Ewa",
+//     notes: [2, 3, 3, 3, 2, 5]
+//   },
+//   {
+//     id: 3,
+//     name: "Zygmunt",
+//     notes: [2, 2, 4, 4, 3, 3]
+//   }
+// ])) // [5, 5, 4]
+
+// Task 75
+
+// function sumFractions(arr) {
+//     return Math.round(arr.map((item) => item[0] / item[1]).reduce((a,b)=> a + b, 0));
+// }
+
+// console.log(sumFractions([[18, 13], [4, 5]])) // 2
+// console.log(sumFractions([[36, 4], [22, 60]])) // 9
+// console.log(sumFractions([[11, 2], [3, 4], [5, 4], [21, 11], [12, 6]])) // 11
+
+// Task 76
+
+// function gcd(arr) {
+//     let min = Math.min(...arr);
+
+//     for (let i = min; i > 0; i--){
+//         if (arr.every((item) => item % i == 0)) {
+//             min = i;
+//             break;
+//         }
+//     }
+
+//     return min;
+// }
+
+// console.log(gcd([10, 20, 40])); // 10
+// console.log(gcd([1, 2, 3, 100])); // 1
+// console.log(gcd([1024, 192, 2048, 512])); // 64
+
+// Task 77
+
+// function expensiveOrders(obj, num) {
+//     const arr = Object.entries(obj);
+//     const filteredArr = arr.filter(item => item[1] > num);
+//     const newObj = Object.fromEntries(filteredArr);
+//     return newObj;
+// }
+
+// console.log(expensiveOrders({'a': 3000, 'b' : 200, 'c' : 1050}, 1000));
