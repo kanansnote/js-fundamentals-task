@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Task 1
 
@@ -911,16 +911,16 @@
 
 // function lonelyInteger(arr) {
 
-    // My code
-    // return arr.sort((a,b)=>Math.abs(a) - Math.abs(b)).map((value, index, array) => {
-    //     if (Math.abs(array[index]) == Math.abs(array[index + 1])) {
-    //         return [array[index], array[index + 1]];
-    //     } else {
-    //         return [array[index + 1]];
-    //     }
-    // }).filter((value, index, array)=> !Math.abs(array[index]) == Math.abs(array[index + 1]));
+// My code
+// return arr.sort((a,b)=>Math.abs(a) - Math.abs(b)).map((value, index, array) => {
+//     if (Math.abs(array[index]) == Math.abs(array[index + 1])) {
+//         return [array[index], array[index + 1]];
+//     } else {
+//         return [array[index + 1]];
+//     }
+// }).filter((value, index, array)=> !Math.abs(array[index]) == Math.abs(array[index + 1]));
 
-    // Shadman's code
+// Shadman's code
 //     const newArr = [...new Set(arr)];
 //     return newArr.reduce((acc, cur)=> acc + cur);
 // }
@@ -947,7 +947,6 @@
 // console.log(maxPossible(523, 76));        // 763
 // console.log(maxPossible(9132, 5564));     // 9655
 // console.log(maxPossible(8732, 91255));    // 9755
-
 
 // Task 46
 
@@ -1012,7 +1011,7 @@
 // 					arr[k] = c;
 // 				}
 // 			}
-			
+
 // 		}
 // 	}
 
@@ -1083,9 +1082,9 @@
 //         if (str1.includes(str2[index])) {
 //             result += str2[index]
 //         }
-        
+
 //     }
-    
+
 //     return result.length;
 // }
 
@@ -1208,7 +1207,7 @@
 //     const arr = [];
 
 //     for (let index = 1; index <= num; index++) {
-        
+
 //         if (num % index == 0) {
 //             arr.push(index);
 //         }
@@ -1284,16 +1283,16 @@
 
 // Task 66
 // function isIsogram(str) {
-    // const text = str.toLowerCase();
-    // const result = new Set(text);
+// const text = str.toLowerCase();
+// const result = new Set(text);
 
-    // if (result.size == str.length) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
+// if (result.size == str.length) {
+//     return true;
+// } else {
+//     return false;
+// }
 
-    // return str.toLowerCase().split("").every((item, index, array) => array.indexOf(item) == array.lastIndexOf(item));
+// return str.toLowerCase().split("").every((item, index, array) => array.indexOf(item) == array.lastIndexOf(item));
 
 // }
 
@@ -1361,7 +1360,7 @@
 //     const strNum = num.toString().split('');
 
 //     for (let i = 0; i < strNum.length; i++) {
-        
+
 //         if (strNum[i] % strNum[i - 1] == 0) {
 //             arr.push(true);
 //         } else {
@@ -1375,7 +1374,6 @@
 // console.log(divisibleByLeft(73312));
 // console.log(divisibleByLeft(635));
 // console.log(divisibleByLeft(1));
-
 
 // Task 73
 
@@ -1392,27 +1390,41 @@
 
 // Task 74 (Unsolved)
 
-// function getStudentTopNotes(obj) {
-//     this.name;
+// function getStudentTopNotes(arr) {
+//     return arr.map(student => {
+//         if (student.notes.length === 0) {
+//             return 0; // or any other default value for students with no notes
+//         } else {
+//             return Math.max(...student.notes);
+//         }
+//     });
+
 // }
 
-// console.log(getStudentTopNotes([
-//   {
-//     id: 1,
-//     name: "Jacek",
-//     notes: [5, 3, 4, 2, 5, 5]
-//   },
-//   {
-//     id: 2,
-//     name: "Ewa",
-//     notes: [2, 3, 3, 3, 2, 5]
-//   },
-//   {
-//     id: 3,
-//     name: "Zygmunt",
-//     notes: [2, 2, 4, 4, 3, 3]
-//   }
-// ])) // [5, 5, 4]
+// console.log(
+// 	getStudentTopNotes([
+// 		{
+// 			id: 1,
+// 			name: "Jacek",
+// 			notes: [5, 3, 4, 2, 5, 5],
+// 		},
+// 		{
+// 			id: 2,
+// 			name: "Ewa",
+// 			notes: [2, 3, 3, 3, 2, 5],
+// 		},
+// 		{
+// 			id: 3,
+// 			name: "Zygmunt",
+// 			notes: [2, 2, 4, 4, 3, 3],
+// 		},
+// 		{
+// 			id: 4,
+// 			name: "Sygmunt",
+// 			notes: [],
+// 		},
+// 	])
+// ); // [5, 5, 4]
 
 // Task 75
 
@@ -1453,3 +1465,124 @@
 // }
 
 // console.log(expensiveOrders({'a': 3000, 'b' : 200, 'c' : 1050}, 1000));
+
+// Task 78
+
+// function countDigits(n, d) {
+// 	let arr = [0];
+
+// 	for (let index = d; index <= n; index++) {
+// 		arr.push(index * index);
+// 	}
+
+// 	return arr.join("").length - arr.join("").split(d).join("").length;
+// }
+
+// console.log(countDigits(10, 1));
+// console.log(countDigits(25, 2));
+
+//
+// function sqfind(int, find){
+//     let arr = new Array(int);
+//     for (let i = 0; i < int+1; i++) {
+//         arr[i] = i*i;
+//     }
+//     return (arr.join("").length - arr.join("").split(find).join("").length)
+// }
+
+// console.log(sqfind(10,1))
+// console.log(sqfind(25,2))
+// console.log(sqfind(10,3))
+
+// Task 79
+// function firstRepeat(str) {
+// 	for (let i = 0; i < str.length; i++) {
+// 		for (let j = i + 1; j < str.length; j++) {
+// 			if (str[i] == str[j]) {
+// 				return str[i];
+// 			}
+// 		}
+//     }
+
+// 	return -1;
+// }
+
+// console.log(firstRepeat("legolas")); // "l"
+// console.log(firstRepeat("Gandalf")); // "a"
+// console.log(firstRepeat("Balrog")); // "-1";
+// console.log(firstRepeat("Isildur")); // "-1");
+
+// Case sensitive "I" not equal to "i"
+
+// Task 80
+// function isPrime(num) {
+//     if (num <= 1) return false;
+//     if (num <= 3) return true;
+
+//     if (num % 2 === 0 || num % 3 === 0) return false;
+
+//     for (let i = 5; i * i <= num; i += 6) {
+//         if (num % i === 0 || num % (i + 2) === 0) return false;
+//     }
+
+//     return true;
+// }
+
+// function primeInRange(n1, n2) {
+//     for (let i = n1; i <= n2; i++) {
+//         if (isPrime(i)) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// console.log(primeInRange(10, 15)); // true (Prime numbers in range: 11, 13)
+// console.log(primeInRange(62, 66)); // false (No prime numbers in range)
+// console.log(primeInRange(3, 5));   // true (Prime numbers in range: 3, 5)
+
+// Task 81
+// function twoProduct(array, n) {
+// 	let result = [];
+
+// 	for (let i = 0; i < array.length; i++) {
+// 		for (let j = i + 1; j < array.length; j++) {
+// 			if (array[i] * array[j] === n) {
+// 				result.push(array[i], array[j]);
+// 				return result.sort((a, b) => a - b);
+// 			}
+// 		}
+// 	}
+
+// 	return undefined;
+// }
+
+// console.log(twoProduct([1, 2, 3, 4, 13, 5], 39)); // [3, 13]
+// console.log(twoProduct([11, 2, 7, 3, 5, 0], 55)); // [5, 11]
+// console.log(twoProduct([100, 12, 4, 1, 2], 15)); // undefined
+
+// Task 82
+
+// function sumOfVowels(str) {
+// 	let value = 0;
+// 	str
+// 		.toLowerCase()
+// 		.split("")
+// 		.forEach((e) => {
+// 			if (e == "a") return (value += 4);
+// 			if (e == "e") return (value += 3);
+// 			if (e == "i") return (value += 1);
+// 			if (e == "o") return (value += 0);
+// 		});
+// 	return value;
+// }
+
+// console.log(sumOfVowels("Let's test this function.")); //8
+// console.log(sumOfVowels("Do I get the correct output?")); //10
+// console.log(sumOfVowels("I love edabit!")); //12
+
+// Vowel	Number
+// A	    4
+// E	    3
+// I	    1
+// O	    0
