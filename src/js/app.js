@@ -1586,3 +1586,55 @@
 // E	    3
 // I	    1
 // O	    0
+
+// Task 83
+// function toArray(obj) {
+//     return Object.entries(obj);
+// }
+
+// console.log(toArray({ a: 1, b: 2 })) // [["a", 1], ["b", 2]]
+// console.log(toArray({ shrimp: 15, tots: 12 })) // [["shrimp", 15], ["tots", 12]]
+// console.log(toArray({})) // []
+
+// Task 84
+// const account1 = { name: "John Doe", password: 1234 };
+// const account2 = { name: "Kate Williams", password: 3333 };
+
+// const accounts = [account1, account2];
+
+// function generateUsername(arr) {
+// 	arr.forEach((element) => {
+// 		const [firstName, lastName] = element.name.toLowerCase().split(" ");
+// 		element.username = firstName[0] + lastName[0];
+// 	});
+// }
+
+// generateUsername(accounts);
+// console.log(accounts); // { name: 'John Doe', password: 1234, username: 'jd' };
+
+// Task 85
+
+// const drinks = [
+// 	{ name: "lemonade", price: 50 },
+// 	{ name: "lime", price: 10 },
+// 	{ name: "orange juice", price: 35 },
+// ];
+
+// function sortDrinkByPrice(obj) {
+// 	return obj.toSorted((a, b) => a.price - b.price);
+// }
+
+// const newDrinks = sortDrinkByPrice(drinks);
+
+// function calculateTotal(newObj) {
+// Method 1
+// 	newObj.pop();
+// 	return newObj.reduce((pre, cur) => pre + cur.price, 0);
+
+// Method 2
+// 	return newObj
+// 		.slice(0, newObj.length - 1)
+// 		.reduce((pre, cur) => pre + cur.price, 0);
+// }
+
+// console.log(calculateTotal(newDrinks));
