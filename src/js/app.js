@@ -1638,3 +1638,64 @@
 // }
 
 // console.log(calculateTotal(newDrinks));
+
+// Task 86
+// function countAll(str) {
+// 	// console.log(str.split(" ").reduce((pre, cur) => {
+// 	// 	if ()
+// 	// }));
+
+// 	const obj = {
+// 		LETTERS: 0,
+// 		DIGITS: 0,
+// 	};
+
+// 	for (let item of str) {
+// 		if (item == " ") {
+// 			continue;
+// 		}
+
+// 		if (isNaN(Number(item))) {
+// 			obj.LETTERS++;
+// 		} else {
+// 			obj.DIGITS++;
+// 		}
+// 	}
+
+// 	return obj;
+// }
+
+// console.log(countAll("Hello World"));
+// console.log(countAll("H3llo Wor1d"));
+// console.log(countAll("149990"));
+
+// countAll("Hello World"); // {'Letters': 10, 'Digits': 0}
+// countAll("H3llo Wor1d"); // {'Letters': 8, 'Digits': 2}
+// countAll("149990"); // {'Letters': 0, 'Digits': 6}
+
+// Task 87
+// function returnUnique(array) {
+// 	const notUnique = [];
+
+// 	for (let index = 0; index < array.length; index++) {
+// 		if (array.indexOf(array[index]) == array.lastIndexOf(array[index])) {
+// 			notUnique.push(array[index]);
+// 		}
+// 	}
+
+// 	console.log(notUnique);
+// }
+
+// returnUnique([1, 9, 8, 8, 7, 6, 1, 6]); // [9, 7]
+// returnUnique([5, 5, 2, 4, 4, 4, 9, 9, 9, 1]); // [2, 1]
+// returnUnique([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]); // [5, 6]
+
+// Task 88 (Unsolved)
+
+// function simplePair(arr, n) {
+// 	// const reduced = arr.reduce((pre, cur) => pre * cur, 1);
+// }
+
+// console.log(simplePair([1, 2, 3], 3)); // [1, 3]
+// console.log(simplePair([1, 2, 3], 6)); // [2, 3]
+// console.log(simplePair([1, 2, 3], 9)); // null
