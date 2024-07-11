@@ -1641,9 +1641,6 @@
 
 // Task 86
 // function countAll(str) {
-// 	// console.log(str.split(" ").reduce((pre, cur) => {
-// 	// 	if ()
-// 	// }));
 
 // 	const obj = {
 // 		LETTERS: 0,
@@ -1675,27 +1672,36 @@
 
 // Task 87
 // function returnUnique(array) {
-// 	const notUnique = [];
+// 	const Unique = [];
 
 // 	for (let index = 0; index < array.length; index++) {
 // 		if (array.indexOf(array[index]) == array.lastIndexOf(array[index])) {
-// 			notUnique.push(array[index]);
+// 			Unique.push(array[index]);
 // 		}
 // 	}
 
-// 	console.log(notUnique);
+// 	console.log(Unique);
 // }
 
 // returnUnique([1, 9, 8, 8, 7, 6, 1, 6]); // [9, 7]
 // returnUnique([5, 5, 2, 4, 4, 4, 9, 9, 9, 1]); // [2, 1]
 // returnUnique([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]); // [5, 6]
 
-// Task 88 (Unsolved)
+// Task 88
 
-// function simplePair(arr, n) {
-// 	// const reduced = arr.reduce((pre, cur) => pre * cur, 1);
+// function simplePair(array, n) {
+// 	for (let index = 0; index < array.length; index++) {
+// 		for (let altIndex = index + 1; altIndex < array.length; altIndex++) {
+// 			if (array[index] * array[altIndex] == n) {
+// 				return [array[index], array[altIndex]];
+// 			}
+// 		}
+// 	}
+
+// 	return null;
 // }
 
 // console.log(simplePair([1, 2, 3], 3)); // [1, 3]
 // console.log(simplePair([1, 2, 3], 6)); // [2, 3]
 // console.log(simplePair([1, 2, 3], 9)); // null
+
