@@ -1388,17 +1388,12 @@
 // console.log(rearrangedDifference(3320707)); // 7709823
 // console.log(rearrangedDifference(90010)); // 90981
 
-// Task 74 (Unsolved)
+// Task 74
 
 // function getStudentTopNotes(arr) {
-//     return arr.map(student => {
-//         if (student.notes.length === 0) {
-//             return 0; // or any other default value for students with no notes
-//         } else {
-//             return Math.max(...student.notes);
-//         }
-//     });
-
+// 	return arr.map((student) =>
+// 		student.notes.length ? Math.max(...student.notes) : 0
+// 	);
 // }
 
 // console.log(
@@ -1705,3 +1700,65 @@
 // console.log(simplePair([1, 2, 3], 6)); // [2, 3]
 // console.log(simplePair([1, 2, 3], 9)); // null
 
+// Task 89
+// function removeEntry(obj, str) {
+// 	return Object.fromEntries(Object.entries(obj).filter((item) => item[0] != str));
+// }
+
+// console.log(removeEntry({ piano: 300, tv: 100, skate: 50 }, "skate"));
+
+// Task 90
+
+// function letterCounter(arr, letter) {
+// 	const flatArr = arr.flat();
+// 	let letterCount = 0;
+
+// 	for (let index = 0; index < flatArr.length; index++) {
+// 		if (flatArr[index] == letter) {
+// 			letterCount++;
+// 		}
+// 	}
+
+// 	return letterCount;
+// }
+
+// console.log(
+// 	letterCounter(
+// 		[
+// 			["D", "E", "Y", "H", "A", "D"],
+// 			["C", "B", "Z", "Y", "J", "K"],
+// 			["D", "B", "C", "A", "M", "N"],
+// 			["F", "G", "G", "R", "S", "R"],
+// 			["V", "X", "H", "A", "S", "S"],
+// 		],
+// 		"D"
+// 	)
+// ); // 3
+
+// Task 91
+
+// function moveToEnd(arr, num) {
+    // My Code
+	// const firstArr = [];
+	// const lastArr = [];
+
+	// for (let index = 0; index < arr.length; index++) {
+	// 	if (arr[index] == num) {
+	// 		lastArr.push(arr[index]);
+	// 	} else {
+	// 		firstArr.push(arr[index]);
+	// 	}
+	// }
+	// return firstArr.concat(lastArr);
+
+    // Mentor's code
+	// const different = [];
+	// const same = [];
+
+	// arr.forEach((number) =>
+	// 	number == num ? same.push(number) : different.push(number)
+	// );
+	// return different.concat(same);
+// }
+
+// console.log(moveToEnd([1, 3, 2, 4, 4, 1], 1)); // [3, 2, 4, 4, 1, 1]
