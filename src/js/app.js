@@ -1762,3 +1762,97 @@
 // }
 
 // console.log(moveToEnd([1, 3, 2, 4, 4, 1], 1)); // [3, 2, 4, 4, 1, 1]
+
+// Task 92 (Further Explanation Needed)
+
+// function nearestChapter(obj, n){
+// 	// if ()
+// 	console.log(Object.values(obj).filter((item, index, array) => {
+// 		const
+		
+// 		if ((n - array[index]) > obj.value){
+// 			return obj.value;
+// 		}
+// 	}));
+// }
+
+
+// nearestChapter({
+// 	"Chapter 1": 1,
+// 	"Chapter 2": 15,
+// 	"Chapter 3": 37
+// }, 10) // "Chapter 2"
+
+// nearestChapter({
+// 	"New Beginnings": 1,
+// 	"Strange Developments": 62,
+// 	"The End?": 194,
+// 	"The True Ending": 460
+// }, 200) // "The End?"
+
+// nearestChapter({
+// 	"Chapter 1a": 1,
+// 	"Chapter 1b": 5
+// }, 3) // "Chapter 1b"
+
+
+// function nearestChapter(obj, page){
+// 	const values = Object.values(obj).sort((a,b)=>a-b); // [1, 15, 37]
+
+// 	let minDifference = values[0];
+// 	for (let item of values){
+// 		if (Math.abs(item - page) <= Math.abs(minDifference - page)){
+// 			minDifference = item;
+// 		}
+// 	}
+
+// 	return Object.entries(obj).find(item=>item[1]== minDifference)[0];
+// }
+
+// console.log(nearestChapter({
+// 	"Chapter 1": 1,
+// 	"Chapter 2": 15,
+// 	"Chapter 3": 37
+// }, 10)) // "Chapter 2"
+
+// console.log(nearestChapter({
+// 	"New Beginnings": 1,
+// 	"Strange Developments": 62,
+// 	"The End?": 194,
+// 	"The True Ending": 460
+// }, 200)) // "The End?"
+
+// console.log(nearestChapter({
+// 	"Chapter 1a": 1,
+// 	"Chapter 1b": 5
+// }, 3)) // "Chapter 1b"
+
+// Task 93 (Unsolved)
+
+// function countIdenticalArrays(...arr) {
+// 	const newArr = arr.map((item) => item.join(""));
+// 	const uniqueElements = new Set(newArr).size;
+
+// 	return arr.length - uniqueElements ? arr.length - uniqueElements + 1 : arr.length - uniqueElements;
+// }
+
+// console.log(countIdenticalArrays([0, 0, 0], [0, 1, 2], [0, 0, 0], [2, 1, 0])); // 2
+// console.log(countIdenticalArrays([0, 1, 0], [0, 1, 2], [0, 2, 0], [2, 1, 0])); // 0
+// console.log(countIdenticalArrays([0, 1, 2], [0, 1, 2], [0, 1, 2], [2, 1, 0])); // 3
+
+
+// function primorial(n) {
+	
+// }
+
+// console.log(primorial(1));
+// console.log(primorial(2));
+// console.log(primorial(6));
+
+// primorial(1) // 2
+// First prime number = 2
+
+// primorial(2) // 6
+// Product of first two prime numbers = 2*3 = 6
+
+// primorial(6) // 30030
