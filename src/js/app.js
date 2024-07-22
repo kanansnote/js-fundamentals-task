@@ -1765,37 +1765,6 @@
 
 // Task 92 (Further Explanation Needed)
 
-// function nearestChapter(obj, n){
-// 	// if ()
-// 	console.log(Object.values(obj).filter((item, index, array) => {
-// 		const
-		
-// 		if ((n - array[index]) > obj.value){
-// 			return obj.value;
-// 		}
-// 	}));
-// }
-
-
-// nearestChapter({
-// 	"Chapter 1": 1,
-// 	"Chapter 2": 15,
-// 	"Chapter 3": 37
-// }, 10) // "Chapter 2"
-
-// nearestChapter({
-// 	"New Beginnings": 1,
-// 	"Strange Developments": 62,
-// 	"The End?": 194,
-// 	"The True Ending": 460
-// }, 200) // "The End?"
-
-// nearestChapter({
-// 	"Chapter 1a": 1,
-// 	"Chapter 1b": 5
-// }, 3) // "Chapter 1b"
-
-
 // function nearestChapter(obj, page){
 // 	const values = Object.values(obj).sort((a,b)=>a-b); // [1, 15, 37]
 
@@ -1827,7 +1796,7 @@
 // 	"Chapter 1b": 5
 // }, 3)) // "Chapter 1b"
 
-// Task 93 (Unsolved)
+// Task 93 (Needs Explanation)
 
 // function countIdenticalArrays(...arr) {
 // 	const newArr = arr.map((item) => item.join(""));
@@ -1840,6 +1809,7 @@
 // console.log(countIdenticalArrays([0, 1, 0], [0, 1, 2], [0, 2, 0], [2, 1, 0])); // 0
 // console.log(countIdenticalArrays([0, 1, 2], [0, 1, 2], [0, 1, 2], [2, 1, 0])); // 3
 
+// Task 94 (Needs Explanation)
 
 // function primorial(n) {
 	
@@ -1856,3 +1826,124 @@
 // Product of first two prime numbers = 2*3 = 6
 
 // primorial(6) // 30030
+
+// Mentor's code
+
+// function isPrime(number) {
+//   for (let i = 2; i < number; i++) {
+//     if (number % i == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// function primorial(num) {
+//   const arr = [];
+//   let number = 2;
+//   while (arr.length < num) {
+//     if (isPrime(number)) {
+//       arr.push(number);
+//     }
+//     number++;
+//   }
+//   return arr.reduce((acc, item) => acc * item, 1);
+// }
+
+// console.log(primorial(5));
+
+// Task 95
+
+// function mostExpensive(obj) {
+// 	console.log(`The most expensive one is the ${Object.entries(obj).sort((a, b) => b[1] - a[1])[0][0]}`);
+// }
+
+// mostExpensive ({
+//   "Diamond Earrings": 980,
+//   "Gold Watch": 250,
+//   "Pearl Necklace": 4650
+// }) //  "The most expensive one is the Pearl Necklace"
+
+// mostExpensive({
+//   "Silver Bracelet": 280,
+//   "Gemstone Earrings": 180,
+//   "Diamond Ring": 3500
+// }) // "The most expensive one is the Diamond Ring"
+
+// Task 96
+
+// function splitBunches(objArr) {
+
+// 	let result = [];
+
+// 	objArr.forEach((item) => {
+// 		for (let i = 0; i < item.quantity; i++) {
+// 			// result.push({ name: item.name, quantity: 1 });
+// 			result.push({...item, quantity: 1 });
+// 		}
+// 	});
+
+// 	console.log(result);
+// }
+
+// splitBunches([
+//   { name: "grapes", quantity: 2 }
+// ]) /* [
+//   { name: "grapes", quantity: 1 },
+//   { name: "grapes", quantity: 1 }
+// ]
+// */
+//   splitBunches([
+//   { name: "currants", quantity: 1 },
+//   { name: "grapes", quantity: 2 },
+//   { name:  "bananas", quantity: 2 }
+// ]) /* [
+//   { name: "currants", quantity: 1},
+//   { name: "grapes", quantity: 1 },
+//   { name: "grapes", quantity: 1 },
+//   { name: "bananas", quantity: 1 },
+//   { name: "bananas", quantity: 1 }
+// ] */
+
+// Task 97 (Needs Further Work)
+
+// function champions(objArr) {
+
+// 	const scores = objArr.map(item => ({
+//         name: item.name,
+// 		points: 3 * item.wins + 0 * item.loss + 1 * item.draws
+// 	}));
+	
+// 	scores.sort((a, b) => b.points - a.points);
+
+// 	console.log(scores[0].name);
+	
+// }
+
+// champions([
+//   {
+//     name: "Manchester United",
+//     wins: 30,
+//     loss: 3,
+//     draws: 5,
+//     scored: 88,
+//     conceded: 20,
+//   },
+//   {
+//     name: "Arsenal",
+//     wins: 24,
+//     loss: 6,
+//     draws: 8,
+//     scored: 98,
+//     conceded: 29,
+//   },
+//   {
+//     name: "Chelsea",
+//     wins: 22,
+//     loss: 8,
+//     draws: 8,
+//     scored: 98,
+//     conceded: 29,
+//   },
+//   ])
+// "Manchester United"
