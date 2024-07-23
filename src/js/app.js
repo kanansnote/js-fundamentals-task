@@ -1947,3 +1947,22 @@
 //   },
 //   ])
 // "Manchester United"
+
+// Task 98
+
+// const h1 = document.querySelector('h1');
+// let time = 10;
+
+// let intervalId = setInterval(() => {
+//   let minutes = Math.trunc(time / 60)
+//     .toString()
+//     .padStart(2, 0);
+//   let seconds = (time % 60).toString().padStart(2, 0);
+
+//   h1.textContent = `${minutes}:${seconds}`;
+// 	time--;
+	
+// 	if (time < 0) {
+// 		clearInterval(intervalId);
+// 	}
+// }, 1000);
