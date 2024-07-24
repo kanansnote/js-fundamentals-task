@@ -1966,3 +1966,71 @@
 // 		clearInterval(intervalId);
 // 	}
 // }, 1000);
+
+// Task 99
+
+// function Car(make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// }
+
+// Car.prototype.accelerate = function() {
+//   this.speed += 10;
+//   console.log(`${this.make} is going at ${this.speed} km/h`);
+// };
+
+// Car.prototype.brake = function() {
+//   this.speed -= 5;
+//   console.log(`${this.make} is going at ${this.speed} km/h`);
+// };
+
+// const bmw = new Car('BMW', 120);
+// const mercedes = new Car('Mercedes', 95);
+
+// bmw.accelerate(); // BMW is going at 130 km/h
+// bmw.brake();      // BMW is going at 125 km/h
+
+// mercedes.accelerate(); // Mercedes is going at 105 km/h
+// mercedes.brake();      // Mercedes is going at 100 km/h
+
+// Task 100
+
+// class Person {
+// 	constructor(name, age, country) {
+// 		this.name = name;
+// 		this.age = age;
+// 		this.country = country;
+// 	}
+
+// 	detail() {
+// 		console.log(`${this.name}, ${this.age} years old, from ${this.country}`);
+// 	}
+// }
+
+// const Nazim = new Person('Nazim', '23', 'Azerbaijan');
+// const Shadman = new Person('Shadman', '29', 'Azerbaijan');
+
+// Nazim.display();
+// Shadman.display();
+
+// Task 101
+
+// class Rectangle {
+// 	constructor(width, height) {
+// 		this.width = width;
+// 		this.height = height;
+// 	}
+
+// 	perimeter() {
+// 		console.log(2 * (this.width + this.height));
+// 	}
+
+// 	area() {
+// 		console.log(this.width * this.height);
+// 	}
+// }
+
+// const values = new Rectangle(15, 25);
+
+// values.perimeter();
+// values.area();
